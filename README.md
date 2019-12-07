@@ -20,8 +20,10 @@ A step by step series of examples that tell you how to get a development env run
 - Open a terminal and move the de videogalleryapp
 - Create a virtualenv using this command: virtualenv -p python3 venv
 - Activate the virtualenv
-    -- Unix: source venv/bin/activate
-    -- Windows: venv\Scripts\activate
+  
+  - Unix: source venv/bin/activate
+  - Windows: venv\Scripts\activate
+  
 - Install dependencies: pip install -r requirements.txt
 - Create an internal database and apply migrations: python manage.py migrate
 - Create the superuser: python manage.py createsuperuser
