@@ -1,0 +1,47 @@
+{% extends "gallery/base.html" %}
+{% load static %}
+{% block title %}Gallery{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/fancytree/skin-lion/ui.fancytree.min.css' %}">
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="{% static 'js/fancytree/jquery.fancytree-all-deps.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/fancytree/jquery.fancytree.filter.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/gallery.js' %}"></script>
+{% endblock %}
+
+{% block body_block %}
+<div class="row h-100">
+
+    <div class="col-xs-12 col-sm-5 col-md-4 p-5">
+        <hr>
+        <h4 class="text-center">Directory Tree</h4>
+        <hr>
+
+        <div id="tree">
+            <input type="text" id="treeFilter" class="form-control" placeholder="Filter..."><br>
+            <ul id="treeData">
+                <li class="expanded folder" data-name="{{ tree.name }}">{{ tree.name }}
+                {% with tree=tree %}
+                    {% include "gallery/task_item.html" %}
+                {% endwith %}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-7 col-md-8 p-5">
+        <div id="videocontainer" class="text-center">
+            <hr>
+            <h4 id="videotitle">Video Title</h6>
+            <hr>
+            <video class="w-75 mt-3" id="videoplayer" controls="controls">
+            </video>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
