@@ -28,5 +28,5 @@ A step by step series of examples that tell you how to get a development env run
 - Create an internal database and apply migrations: python manage.py migrate
 - Create the superuser: python manage.py createsuperuser
 - Create a filesystem structure with videos under the "media" folder. If you dont perform this, you will see an empty tree :)
-- Launch the program using: python manage.py runserver 0:8000
+- Launch the program using: python manage.py runserver 0.0.0.0:8000
 - Connect via browser to the IP:8000

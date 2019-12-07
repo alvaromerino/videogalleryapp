@@ -1,10 +1,11 @@
 $(function () {
     $("#tree").fancytree({
-        activeVisible: true,
-        autoActivate: true,
-        autoCollapse: true,
+        activeVisible: false,
+        autoActivate: false,
+        autoCollapse: false,
         autoScroll: false,
         clickFolderMode: 2,
+        debugLevel: 2,
         extensions: ["filter"],
         filter: {
             counter: false,
