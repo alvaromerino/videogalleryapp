@@ -5,3 +5,13 @@ body, html {
 body {
     padding-top: 56px;
 }
+
+span.fancytree-title { white-space: normal; }
+
+div#videocontainer {
+    border: 3px solid;
+}
+
+video#videoplayer {
+    display: block !important;
+}

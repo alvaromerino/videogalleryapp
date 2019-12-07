@@ -1,9 +1,9 @@
 <ul>
     {% for t in tree.children %}                
         {% if t.children is not None %}
-        <li class="expanded folder" data-name="{{ t.name }}">
+        <li class="expanded folder" data-name="{{ t.name }}" data-tooltip="{{ t.name }}">
         {% else %}
-        <li data-src="{{ t.src }}" data-name="{{ t.name }}">{% endif %}{{ t.name }}
+        <li data-src="{{ t.src }}" data-name="{{ t.name }}" data-tooltip="{{ t.name }}">{% endif %}{{ t.name }}
         {% with tree=t %}
             {% include "gallery/tree_level.html" %}
         {% endwith %}
