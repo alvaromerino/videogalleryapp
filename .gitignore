@@ -310,7 +310,7 @@ venv.bak/
 pip-selfcheck.json
 
 ### VisualStudioCode ###
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -319,5 +319,9 @@ pip-selfcheck.json
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
+
+# Content of media folder
+media/*
+!media/.gitkeep
 
 # End of https://www.gitignore.io/api/python,django,eclipse,intellij,virtualenv,sublimetext,visualstudiocode
