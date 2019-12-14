@@ -34,4 +34,11 @@ $(function () {
         }
     });
 
+    var MAX_INITIAL_DEPTH_LEVEL_EXPANDED = 2;
+    $tree.getRootNode().visit(function(node) {
+        if (node.getLevel() <= MAX_INITIAL_DEPTH_LEVEL_EXPANDED) {
+            node.setExpanded(true);
+        }
+    });
+
 });
