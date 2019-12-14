@@ -22,7 +22,7 @@
         <div id="tree">
             <input type="text" id="treeFilter" class="form-control" placeholder="Filter..."><br>
             <ul id="treeData">
-                <li class="expanded folder" data-name="{{ tree.name }}">{{ tree.name }}
+                <li class="folder" data-name="{{ tree.name }}">{{ tree.name }}
                 {% with tree=tree %}
                     {% include "gallery/tree_level.html" %}
                 {% endwith %}
