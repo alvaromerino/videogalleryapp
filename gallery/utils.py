@@ -5,8 +5,8 @@ from pymediainfo import MediaInfo
 
 
 def is_video(path):
-    fileInfo = MediaInfo.parse(path)
-    for track in fileInfo.tracks:
+    file_info = MediaInfo.parse(path)
+    for track in file_info.tracks:
         if track.track_type == "Video":
             return True
     return False
