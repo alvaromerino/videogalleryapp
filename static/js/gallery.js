@@ -1,4 +1,9 @@
 $(function () {
+    
+    $(this).bind("contextmenu", function(e) {
+            e.preventDefault();
+    });
+
     $("#tree").fancytree({
         activeVisible: false,
         autoActivate: false,
