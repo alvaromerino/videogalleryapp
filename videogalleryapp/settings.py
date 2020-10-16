@@ -25,9 +25,9 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = 'ix_5cdv&^=ul$xt6ag^qdcjk!n(!2f9r9=b#wkftje(v-$tg(8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tutorial.gcm-ah.com']
 
 # Application definition
 
@@ -116,8 +116,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [STATIC_DIR, ]
+STATIC_ROOT = '/home/gcm/videogalleryapp/static/'
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
 LOGIN_URL = '/login/'
+
+
+USE_X_FORWARDED_HOST = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
