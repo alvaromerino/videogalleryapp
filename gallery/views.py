@@ -43,4 +43,5 @@ def user_login(request):
 @login_required
 def gallery(request):
     tree = make_tree(settings.MEDIA_ROOT)
+    tree['name'] = "VIDEOS"
     return render(request, 'gallery/gallery.html', {'tree': tree})
