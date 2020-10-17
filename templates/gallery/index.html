@@ -5,12 +5,12 @@
 {% block body_block %}
 <div class="row h-100">
     <div class="col m-auto text-center">
-        <h1>Welcome to the Video Gallery Site!</h1>
+        <h1>Video Galeria GCM</h1>
         {% if user.is_authenticated %}
-        <h2>Hello {{ user.username }}</h2>
-        <h3>You can visit the <a href="{% url 'gallery:index' %}">gallery</a></h3>
+        <h2>Hola {{ user.username }}</h2>
+        <h3>Puedes ver la <a href="{% url 'gallery:index' %}">galeria de videos</a></h3>
         {% else %}
-        <h3>You need to <a href="{% url 'login' %}">login</a> to go to the <a href="{% url 'gallery:index' %}">gallery</a></h3>
+        <h3>Tu necesitas <a href="{% url 'login' %}">tu password</a> para ir a la <a href="{% url 'gallery:index' %}">galeria de videos</a></h3>
         {% endif %}
     </div>
 </div>

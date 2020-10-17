@@ -16,8 +16,8 @@
 
         <form method="post" action="{% url 'login' %}">
             {% csrf_token %}
-            <h1 class="h3 mb-3 font-weight-normal text-center">Please sign in</h1>
-            <label for="username">Username:</label>
+            <h1 class="h3 mb-3 font-weight-normal text-center">ACCESO</h1>
+            <label for="username">Usuario:</label>
             <input id="username" type="text" name="username" placeholder="Username" class="form-control" required
                    autofocus>
             <br>
@@ -26,7 +26,7 @@
                    required>
             <br>
             <input type="hidden" name="next" value="{{ request.GET.next }}"/>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Aceptar</button>
         </form>
     </div>
 </div>
